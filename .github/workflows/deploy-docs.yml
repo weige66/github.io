@@ -34,6 +34,9 @@ jobs:
           node-version: 20
           cache: pnpm
 
+      - name: 安装依赖
+        run: |
+          pnpm install sass -D
 
       - name: 构建文档
         env:
