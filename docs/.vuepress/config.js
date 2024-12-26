@@ -4,10 +4,10 @@ import { defineUserConfig } from 'vuepress'
 import { viteBundler } from '@vuepress/bundler-vite'
 
 export default defineUserConfig({
-  lang: 'en-US',
+  lang: 'zh-CN',
 
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  title: 'weiGe Blog',
+  description: 'My first VuePress blog',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
@@ -15,19 +15,19 @@ export default defineUserConfig({
     navbar: [
       '/',
       {
-        text: 'Article',
+        text: '文章',
         link: '/article/',
       },
       {
-        text: 'Category',
+        text: '分类',
         link: '/category/',
       },
       {
-        text: 'Tag',
+        text: '标签',
         link: '/tag/',
       },
       {
-        text: 'Timeline',
+        text: '时间轴',
         link: '/timeline/',
       },
     ],
