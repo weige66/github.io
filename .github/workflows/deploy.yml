@@ -1,4 +1,4 @@
-name: deploy
+name: 博客构建部署
 
 on:
   # 每当 push 到 main 分支时触发部署
@@ -20,10 +20,10 @@ jobs:
           # "Last updated time" and other git log-related information require fetching all commit records.
           fetch-depth: 0
 
-      - name: Setup pnpm
+      - name: 更新 pnpm
         uses: pnpm/action-setup@v4
 
-      - name: Setup Node.js
+      - name: 更新 Node.js
         uses: actions/setup-node@v4
         with:
           # 选择要使用的 node 版本
@@ -32,13 +32,13 @@ jobs:
 
       # 安装依赖
       # Install dependencies
-      - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+      - name: 安装依赖
+        run: pnpm install
 
 
       # 运行构建脚本
       # Run the build script
-      - name: Build VuePress site
+      - name: 运行构建脚本
         run: pnpm run docs:build
 
 
