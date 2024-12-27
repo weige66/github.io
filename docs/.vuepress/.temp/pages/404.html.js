@@ -1,5 +1,5 @@
 import comp from "/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/.temp/pages/404.html.vue"
-const data = JSON.parse("{\"path\":\"/404.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{\"layout\":\"NotFound\",\"gitInclude\":[]},\"headers\":[],\"readingTime\":{\"minutes\":0.01,\"words\":3},\"filePathRelative\":null,\"bulletin\":false}")
+const data = JSON.parse("{\"path\":\"/404.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{\"layout\":\"NotFound\",\"watermark\":true},\"headers\":[],\"readingTime\":{\"minutes\":0.01,\"words\":3},\"git\":{},\"filePathRelative\":null,\"bulletin\":false}")
 export { comp, data }
 
 if (import.meta.webpackHot) {

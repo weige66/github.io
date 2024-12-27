@@ -8,8 +8,10 @@ import * as clientConfig6 from '/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/
 import * as clientConfig7 from '/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/.temp/md-enhance/config.js'
 import * as clientConfig8 from '/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/.temp/md-power/config.js'
 import * as clientConfig9 from '/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/.temp/markdown-math/config.js'
-import * as clientConfig10 from '/Users/zhengwei/myCode/weigeBlog/node_modules/.pnpm/vuepress-theme-plume@1.0.0-rc.124_@algolia+client-search@5.18.0_markdown-it@14.1.0_sass-embed_bvcetv66wkgmsohsrwyvvgfzu4/node_modules/vuepress-theme-plume/lib/client/config.js'
-import * as clientConfig11 from '/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/client.ts'
+import * as clientConfig10 from '/Users/zhengwei/myCode/weigeBlog/node_modules/.pnpm/@vuepress+plugin-watermark@2.0.0-rc.66_typescript@5.7.2_vuepress@2.0.0-rc.19_@vuepress+bundle_vuaatfquanq3wwoxyf66vbm2mi/node_modules/@vuepress/plugin-watermark/lib/client/config.js'
+import * as clientConfig11 from '/Users/zhengwei/myCode/weigeBlog/node_modules/.pnpm/@vuepress+plugin-comment@2.0.0-rc.66_typescript@5.7.2_vuepress@2.0.0-rc.19_@vuepress+bundler-_aj6d67oc2xvazqr3yniznhob3e/node_modules/@vuepress/plugin-comment/lib/client/config.js'
+import * as clientConfig12 from '/Users/zhengwei/myCode/weigeBlog/node_modules/.pnpm/vuepress-theme-plume@1.0.0-rc.124_@algolia+client-search@5.18.0_markdown-it@14.1.0_sass-embed_bvcetv66wkgmsohsrwyvvgfzu4/node_modules/vuepress-theme-plume/lib/client/config.js'
+import * as clientConfig13 from '/Users/zhengwei/myCode/weigeBlog/docs/.vuepress/client.ts'
 
 export const clientConfigs = [
   clientConfig0,
@@ -24,4 +26,6 @@ export const clientConfigs = [
   clientConfig9,
   clientConfig10,
   clientConfig11,
+  clientConfig12,
+  clientConfig13,
 ].map((m) => m.default).filter(Boolean)
