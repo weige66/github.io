@@ -78,9 +78,6 @@ export default defineUserConfig({
        */
       markdownEnhance: {
         demo: true,
-        stylize:true,
-        vuePlayground: true,
-         mermaid: true
         // include: true,
         
         // chart: true,
@@ -93,42 +90,42 @@ export default defineUserConfig({
        *  markdown power
        * @see https://theme-plume.vuejs.press/config/plugin/markdown-power/
        */
-      markdownPower: {
-        pdf: true,
-        caniuse: true,
-        plot: true,
-        bilibili: true,
-        youtube: true,
-        icons: true,
-        codepen: true,
-        replit: true,
-        codeSandbox: true,
-        jsfiddle: true,
-        repl: {
-          go: true,
-          rust: true,
-          kotlin: true,
-        },
-      },
+      // markdownPower: {
+      //   pdf: true,
+      //   caniuse: true,
+      //   plot: true,
+      //   bilibili: true,
+      //   youtube: true,
+      //   icons: true,
+      //   codepen: true,
+      //   replit: true,
+      //   codeSandbox: true,
+      //   jsfiddle: true,
+      //   repl: {
+      //     go: true,
+      //     rust: true,
+      //     kotlin: true,
+      //   },
+      // },
 
       /**
        * 评论 comments
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
-      comment: {
-        provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-        comment: true,
-        repo: '',
-        repoId: '',
-        category: '',
-        categoryId: '',
-        mapping: 'pathname',
-        reactionsEnabled: true,
-        inputPosition: 'top',
-      },
-      search: {
+      // comment: {
+      //   provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+      //   comment: true,
+      //   repo: '',
+      //   repoId: '',
+      //   category: '',
+      //   categoryId: '',
+      //   mapping: 'pathname',
+      //   reactionsEnabled: true,
+      //   inputPosition: 'top',
+      // },
+      // search: {
 
-      }
+      // }
     },
   }),
 })
