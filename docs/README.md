@@ -1,7 +1,6 @@
 ---
 home: true
 title: 首页
-heroImage: https://vuejs.press/images/hero.png
 actions:
   - text: 现在开始
     link: /getting-started.html

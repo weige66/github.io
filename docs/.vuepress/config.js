@@ -10,7 +10,7 @@ export default defineUserConfig({
   description: 'My first VuePress blog',
 
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: '/images/logo.png',
 
     navbar: [
       '/',
