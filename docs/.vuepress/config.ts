@@ -32,7 +32,7 @@ export default defineUserConfig({
 
     docsDir: 'docs',
     blog: {
-      include: ['/**/*.md'],
+      include: ['blog/**/*.md'],
       exclude: ['.vuepress/', '**/README.md'],
       pagination: 15,
     },
