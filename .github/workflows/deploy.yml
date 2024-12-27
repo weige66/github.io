@@ -15,7 +15,6 @@ jobs:
 
     # 优化 workflow，使用 pnpm 的缓存
     # Optimize the workflow by using pnpm's cache.
-    cache: pnpm
 
     steps:
       - uses: actions/checkout@v4
