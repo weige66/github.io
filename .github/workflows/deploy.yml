@@ -29,12 +29,12 @@ jobs:
           # 选择要使用的 node 版本
           node-version: 20
 
-
+      - name: 清楚缓存目录
+        run: rm -rf docs/.vuepress/.temp docs/.vuepress/.cache
       # 安装依赖
       # Install dependencies
       - name: 安装依赖
         run: pnpm install
-
 
       # 运行构建脚本
       # Run the build script
