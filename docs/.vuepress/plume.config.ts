@@ -6,7 +6,7 @@ import { enNotes, zhNotes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-  logo: './public/images/logo.png',
+  logo: 'https://avatars.githubusercontent.com/u/60763435?v=4',
 
   appearance: true,
 
@@ -17,10 +17,10 @@ export default defineThemeConfig({
   locales: {
     '/': {
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
-        name: 'weiGeBlog',
+        avatar: 'https://avatars.githubusercontent.com/u/60763435?v=4',
+        name: 'weiGe Blog',
         description: 'weiGe的个人博客',
-        // circle: true,
+        circle: true,
         // location: '',
         // organization: '',
       },
@@ -30,10 +30,10 @@ export default defineThemeConfig({
     },
     '/en/': {
       profile: {
-        avatar: 'https://theme-plume.vuejs.press/plume.png',
-        name: 'weiGeBlog',
+        avatar: 'https://avatars.githubusercontent.com/u/60763435?v=4',
+        name: 'weiGe Blog',
         description: 'weiGe的个人博客',
-        // circle: true,
+        circle: true,
         // location: '',
         // organization: '',
       },
