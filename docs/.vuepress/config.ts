@@ -8,7 +8,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   locales: {
     '/': {
-      title: "",
+      title: "zhengWei's Blog",
       lang: 'zh-CN',
       description: "zhengWei's Blog",
     },
@@ -35,6 +35,10 @@ export default defineUserConfig({
       include: ['blog/**/*.md'],
       exclude: ['.vuepress/', '**/README.md'],
       pagination: 10,
+    },
+    footer: {
+      message:'',
+      copyright: 'Copyright © 2024 weiGe66',
     },
 
     plugins: {
@@ -112,20 +116,17 @@ export default defineUserConfig({
        * 评论 comments
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
-      // comment: {
-      //   provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-      //   comment: true,
-      //   repo: '',
-      //   repoId: '',
-      //   category: '',
-      //   categoryId: '',
-      //   mapping: 'pathname',
-      //   reactionsEnabled: true,
-      //   inputPosition: 'top',
-      // },
-      // search: {
-
-      // }
+      comment: {
+        provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+        comment: true,
+        repo: 'weiGe66/blog-comment',
+        repoId: 'R_kgDONjSrog',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDONjSros4Clkyx',
+        mapping: 'title',
+        reactionsEnabled: true,
+        inputPosition: 'bottom'
+      },
     },
   }),
 })
