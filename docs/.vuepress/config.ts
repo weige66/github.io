@@ -8,15 +8,15 @@ export default defineUserConfig({
   lang: 'zh-CN',
   locales: {
     '/': {
-      title: 'weiGeBlog',
+      title: "",
       lang: 'zh-CN',
-      description: 'weiGe的个人博客',
+      description: "zhengWei's Blog",
     },
-    '/en/': {
-      title: 'weiGeBlog',
-      lang: 'en-US',
-      description: 'weiGe的个人博客',
-    },
+    // '/en/': {
+    //   title: 'weiGeBlog',
+    //   lang: 'en-US',
+    //   description: 'weiGe的个人博客',
+    // },
   },
 
   bundler: viteBundler(),
@@ -34,7 +34,7 @@ export default defineUserConfig({
     blog: {
       include: ['blog/**/*.md'],
       exclude: ['.vuepress/', '**/README.md'],
-      pagination: 15,
+      pagination: 10,
     },
 
     plugins: {
