@@ -2,6 +2,7 @@
 title: git
 createTime: 2024/12/28 23:01:05
 permalink: /article/nm3x24ju/
+# sticky: true
 tags:
     - git
 ---

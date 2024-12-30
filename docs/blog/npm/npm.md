@@ -2,6 +2,8 @@
 title: npm
 createTime: 2024/12/28 23:00:37
 permalink: /article/gkpntq56/
+# sticky: true # 置顶
+# draft: true # 草稿
 tags:
     - npm
 ---

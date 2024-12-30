@@ -11,6 +11,7 @@ export default defineUserConfig({
       title: "zhengWei's Blog",
       lang: 'zh-CN',
       description: "zhengWei's Blog",
+
     },
     // '/en/': {
     //   title: 'weiGeBlog',
@@ -24,11 +25,9 @@ export default defineUserConfig({
 
 
   theme: plumeTheme({
-    // 添加您的部署域名
-    // hostname: 'https://your_site_url',
-    // your git repo url
     cache: false,
-    docsRepo: '',
+    docsRepo: 'https://github.com/weiGe66/weige66.github.io',
+    hostname: 'https://weige66.github.io/',
 
     docsDir: 'docs',
     blog: {
@@ -40,9 +39,21 @@ export default defineUserConfig({
       message:'',
       copyright: 'Copyright © 2024 weiGe66',
     },
+    encrypt:{
+      rules:{
+        '/notes/':'admin7058'
+      }
+    },
 
     plugins: {
       git: true,
+      seo:{
+        hostname: 'https://weige66.github.io/',
+        author: 'weiGe66',
+        autoDescription: true,
+        
+      },
+      
       /**
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
@@ -94,7 +105,10 @@ export default defineUserConfig({
        *  markdown power
        * @see https://theme-plume.vuejs.press/config/plugin/markdown-power/
        */
-      // markdownPower: {
+      markdownPower: {
+        npmTo: {
+          tabs: ['npm', 'yarn', 'pnpm'], // 代码块组默认显示顺序
+        }
       //   pdf: true,
       //   caniuse: true,
       //   plot: true,
@@ -110,7 +124,7 @@ export default defineUserConfig({
       //     rust: true,
       //     kotlin: true,
       //   },
-      // },
+      },
 
       /**
        * 评论 comments

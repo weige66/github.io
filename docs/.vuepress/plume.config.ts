@@ -14,7 +14,7 @@ export default defineThemeConfig({
     { icon: 'github', link: 'https://github.com/weiGe66' },
     { icon: 'juejin', link: 'https://juejin.cn/user/1169536105056071' }
   ],
-
+  navbarSocialInclude: ['github', 'juejin'],
   locales: {
     '/': {
       profile: {
@@ -22,7 +22,7 @@ export default defineThemeConfig({
         name: "zhengWei's Blog",
         // description: 'weiGe的个人博客',
         circle: true,
-        // location: '',
+        location: '武汉',
         // organization: '',
       },
 

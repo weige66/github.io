@@ -2,6 +2,7 @@
 title: 常用的shell命令
 createTime: 2024/12/28 23:52:07
 permalink: /article/xenhoozn/
+# sticky: true
 tags:
     - linux
 ---

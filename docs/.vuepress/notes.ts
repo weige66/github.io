@@ -2,16 +2,26 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 
 /* =================== locale: zh-CN ======================= */
 
-const zhDemoNote = defineNoteConfig({
-  dir: 'vue',
-  link: '/vue',
-  // sidebar: ['', 'foo', 'bar'],
-})
-
 export const zhNotes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [zhDemoNote],
+  notes: [
+    {
+      dir: 'vue',
+      link: '/vue',
+      sidebar: 'auto'
+    },
+    {
+      dir: 'js',
+      link: '/js',
+      sidebar: 'auto'
+    },
+    {
+      dir: 'node',
+      link: '/node',
+      sidebar: 'auto'
+    }
+  ],
 })
 
 /* =================== locale: en-US ======================= */
