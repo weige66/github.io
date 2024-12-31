@@ -22,8 +22,8 @@ comments: false
   <LinkCard title="vue3中文文档" icon="logos:vue"  href="https://cn.vuejs.org/" />
   <LinkCard title="flutter中文文档" icon="logos:flutter"  href="https://docs.flutter.cn/" />
   <LinkCard title="nuxt3中文文档"  icon="logos:nuxt" href="https://www.nuxt.com.cn/" />
-  <!-- <LinkCard title="图片压缩"  href="https://tinypng.com/" />
-  <LinkCard title="在线工具"  href="https://tool.lu/" /> -->
+  <LinkCard title="MDN" icon="logos:mdn"  href="https://developer.mozilla.org/zh-CN/docs/Web" />
+  <!-- <LinkCard title="在线工具"  href="https://tool.lu/" /> -->
   <!-- <LinkCard title="印记中文"  href=" https://docschina.org/" />
   <LinkCard title="印记中文"  href=" https://docschina.org/" /> -->
 </CardGrid>

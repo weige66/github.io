@@ -1,38 +1,34 @@
-import { viteBundler } from '@vuepress/bundler-vite'
-import { defineUserConfig } from 'vuepress'
-import { plumeTheme } from 'vuepress-theme-plume'
-
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { plumeTheme } from "vuepress-theme-plume";
 
 export default defineUserConfig({
-  base: '/',
-  lang: 'zh-CN',
+  base: "/",
+  lang: "zh-CN",
   locales: {
-    '/': {
+    "/": {
       title: "zhengWei's Blog",
-      lang: 'zh-CN',
+      lang: "zh-CN",
       description: "zhengWei's Blog",
-
     },
   },
 
   bundler: viteBundler(),
 
-
-
   theme: plumeTheme({
     cache: false,
-    docsRepo: 'https://github.com/weiGe66/weige66.github.io',
-    hostname: 'https://weige66.github.io/',
-    docsDir: 'docs',
-    editLink:false,
+    docsRepo: "https://github.com/weiGe66/weige66.github.io",
+    hostname: "https://weige66.github.io/",
+    docsDir: "docs",
+    editLink: false,
     blog: {
-      include: ['blog/**/*.md'],
-      exclude: ['.vuepress/', '**/README.md'],
+      include: ["blog/**/*.md"],
+      exclude: [".vuepress/", "**/README.md"],
       pagination: 10,
     },
     footer: {
-      message:'',
-      copyright: 'Copyright © 2024 weiGe66',
+      message: "",
+      copyright: "Copyright © 2024 weiGe66",
     },
     // encrypt:{
     //   rules:{
@@ -42,31 +38,34 @@ export default defineUserConfig({
 
     plugins: {
       git: true,
-      seo:{
-        hostname: 'https://weige66.github.io/',
-        author: 'weiGe66',
+      seo: {
+        hostname: "https://weige66.github.io/",
+        author: {
+          name: "weiGe66",
+          url: "https://github.com/weiGe66",
+          email: "2361929296@qq.com",
+        },
         autoDescription: true,
-        
       },
-      
+
       /**
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
        */
       shiki: {
-          //  强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-          theme: "one-dark-pro",
-          languages: [
-            "shell",
-            "java",
-            "bash",
-            "typescript",
-            "javascript",
-            "vue",
-            "css",
-            "html",
-            "nginx",
-          ],
+        //  强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
+        theme: "one-dark-pro",
+        languages: [
+          "shell",
+          "java",
+          "bash",
+          "typescript",
+          "javascript",
+          "vue",
+          "css",
+          "html",
+          "nginx",
+        ],
       },
       // // watermark: true,
       // watermark: {
@@ -90,7 +89,7 @@ export default defineUserConfig({
        * @see https://theme-plume.vuejs.press/config/plugins/reading-time/
        */
       readingTime: {
-        wordPerMinute: 300
+        wordPerMinute: 300,
       },
 
       /**
@@ -100,7 +99,7 @@ export default defineUserConfig({
       markdownEnhance: {
         demo: true,
         // include: true,
-        
+
         // chart: true,
         // echarts: true,
         // mermaid: true,
@@ -113,23 +112,23 @@ export default defineUserConfig({
        */
       markdownPower: {
         npmTo: {
-          tabs: ['npm', 'yarn', 'pnpm'], // 代码块组默认显示顺序
-        }
-      //   pdf: true,
-      //   caniuse: true,
-      //   plot: true,
-      //   bilibili: true,
-      //   youtube: true,
-      //   icons: true,
-      //   codepen: true,
-      //   replit: true,
-      //   codeSandbox: true,
-      //   jsfiddle: true,
-      //   repl: {
-      //     go: true,
-      //     rust: true,
-      //     kotlin: true,
-      //   },
+          tabs: ["npm", "yarn", "pnpm"], // 代码块组默认显示顺序
+        },
+        //   pdf: true,
+        //   caniuse: true,
+        //   plot: true,
+        //   bilibili: true,
+        //   youtube: true,
+        //   icons: true,
+        //   codepen: true,
+        //   replit: true,
+        //   codeSandbox: true,
+        //   jsfiddle: true,
+        //   repl: {
+        //     go: true,
+        //     rust: true,
+        //     kotlin: true,
+        //   },
       },
 
       /**
@@ -137,16 +136,16 @@ export default defineUserConfig({
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
       comment: {
-        provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+        provider: "Giscus", // "Artalk" | "Giscus" | "Twikoo" | "Waline"
         comment: true,
-        repo: 'weiGe66/blog-comment',
-        repoId: 'R_kgDONjSrog',
-        category: 'Announcements',
-        categoryId: 'DIC_kwDONjSros4Clkyx',
-        mapping: 'title',
+        repo: "weiGe66/blog-comment",
+        repoId: "R_kgDONjSrog",
+        category: "Announcements",
+        categoryId: "DIC_kwDONjSros4Clkyx",
+        mapping: "title",
         reactionsEnabled: true,
-        inputPosition: 'bottom'
+        inputPosition: "bottom",
       },
     },
   }),
-})
+});
