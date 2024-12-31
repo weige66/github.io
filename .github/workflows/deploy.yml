@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 jobs:
-  docs:
+  docs-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
           # 选择要使用的 node 版本
           node-version: 20
 
-      - name: 清楚缓存目录
+      - name: 清除缓存目录
         run: rm -rf docs/.vuepress/.temp docs/.vuepress/.cache
       # 安装依赖
       # Install dependencies
