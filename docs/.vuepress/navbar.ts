@@ -5,10 +5,11 @@ export const zhNavbar = defineNavbarConfig([
   // { text: '博客', link: '/blog/' },
   { text: '标签', link: '/blog/tags/' },
   { text: '归档', link: '/blog/archives/' },
+  
   {
     text: '笔记',
-    items: [{ text: 'vue相关', link: '/notes/vue/README.md' },{ text: 'js相关', link: '/notes/js/README.md' },{ text: 'node相关', link: '/notes/node/README.md' }]
-  },
+    items: [{ text: 'vue相关', link: '/notes/vue/README.md' },{ text: 'js相关', link: '/notes/js/README.md' },{ text: 'node相关', link: '/notes/node/README.md' },{ text: '网址导航', link: '/notes/websiteGuide.md' }]
+  }
 ])
 
 // export const enNavbar = defineNavbarConfig([

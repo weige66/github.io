@@ -13,11 +13,6 @@ export default defineUserConfig({
       description: "zhengWei's Blog",
 
     },
-    // '/en/': {
-    //   title: 'weiGeBlog',
-    //   lang: 'en-US',
-    //   description: 'weiGe的个人博客',
-    // },
   },
 
   bundler: viteBundler(),
@@ -28,8 +23,8 @@ export default defineUserConfig({
     cache: false,
     docsRepo: 'https://github.com/weiGe66/weige66.github.io',
     hostname: 'https://weige66.github.io/',
-
     docsDir: 'docs',
+    editLink:false,
     blog: {
       include: ['blog/**/*.md'],
       exclude: ['.vuepress/', '**/README.md'],
@@ -39,11 +34,11 @@ export default defineUserConfig({
       message:'',
       copyright: 'Copyright © 2024 weiGe66',
     },
-    encrypt:{
-      rules:{
-        '/notes/':'admin7058'
-      }
-    },
+    // encrypt:{
+    //   rules:{
+    //     '/notes/':'admin7058'
+    //   }
+    // },
 
     plugins: {
       git: true,
@@ -60,7 +55,18 @@ export default defineUserConfig({
        */
       shiki: {
           //  强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-        languages: ['shell', 'bash', 'typescript', 'javascript'],
+          theme: "one-dark-pro",
+          languages: [
+            "shell",
+            "java",
+            "bash",
+            "typescript",
+            "javascript",
+            "vue",
+            "css",
+            "html",
+            "nginx",
+          ],
       },
       // // watermark: true,
       // watermark: {
