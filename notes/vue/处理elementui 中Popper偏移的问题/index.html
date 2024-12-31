@@ -1,0 +1,249 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="generator" content="VuePress 2.0.0-rc.19" /><meta name="theme" content="VuePress Theme Plume " /><script id="check-mac-os">document.documentElement.classList.toggle('mac', /Mac|iPhone|iPod|iPad/i.test(navigator.platform))</script><script id="check-dark-mode">;(function () {const um= localStorage.getItem('vuepress-theme-appearance') || 'auto';const sm = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = um === 'dark' || (um !== 'light' && sm);document.documentElement.dataset.theme = isDark ? 'dark' : 'light';})();</script><meta property="og:url" content="https://weige66.github.io/notes/vue/%E5%A4%84%E7%90%86elementui%20%E4%B8%ADPopper%E5%81%8F%E7%A7%BB%E7%9A%84%E9%97%AE%E9%A2%98/"><meta property="og:site_name" content="zhengWei's Blog"><meta property="og:title" content="处理elementui 中Popper偏移的问题"><meta property="og:description" content="用法"><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2024-12-28T16:17:08.000Z"><meta property="article:modified_time" content="2024-12-28T16:17:08.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"处理elementui 中Popper偏移的问题","image":[""],"dateModified":"2024-12-28T16:17:08.000Z","author":[{"@type":"Person","name":"weiGe66","url":"https://github.com/weiGe66","email":"2361929296@qq.com"}]}</script><title>处理elementui 中Popper偏移的问题 | zhengWei's Blog</title><meta name="description" content="用法"><link rel="preload" href="/assets/style-BpYgKOBY.css" as="style"><link rel="stylesheet" href="/assets/style-BpYgKOBY.css"><link rel="modulepreload" href="/assets/app-0O2wLXp2.js"><link rel="modulepreload" href="/assets/index.html-C1ueR98h.js"><link rel="prefetch" href="/assets/index.html-CHldvtrI.js" as="script"><link rel="prefetch" href="/assets/index.html-DYDkS5Kw.js" as="script"><link rel="prefetch" href="/assets/index.html-BmXm8hc_.js" as="script"><link rel="prefetch" href="/assets/index.html-CeNuJ0WU.js" as="script"><link rel="prefetch" href="/assets/index.html-OAwPEHLo.js" as="script"><link rel="prefetch" href="/assets/index.html-BqeBvjWH.js" as="script"><link rel="prefetch" href="/assets/index.html-DPYtqrfG.js" as="script"><link rel="prefetch" href="/assets/index.html-B9TX5tx5.js" as="script"><link rel="prefetch" href="/assets/index.html-BTCMPvOt.js" as="script"><link rel="prefetch" href="/assets/index.html-C0YpK1QV.js" as="script"><link rel="prefetch" href="/assets/index.html-Cn_H5MbK.js" as="script"><link rel="prefetch" href="/assets/index.html-BkQF8y75.js" as="script"><link rel="prefetch" href="/assets/index.html-tU-Dn_gw.js" as="script"><link rel="prefetch" href="/assets/index.html-DJq53KA0.js" as="script"><link rel="prefetch" href="/assets/index.html-C8PkxVth.js" as="script"><link rel="prefetch" href="/assets/index.html-D9_13178.js" as="script"><link rel="prefetch" href="/assets/index.html-BVQfL1lR.js" as="script"><link rel="prefetch" href="/assets/index.html-Bil5oGSV.js" as="script"><link rel="prefetch" href="/assets/index.html-Cy5-suxf.js" as="script"><link rel="prefetch" href="/assets/index.html-Mv3gBcBJ.js" as="script"><link rel="prefetch" href="/assets/index.html-BWKj8eFo.js" as="script"><link rel="prefetch" href="/assets/index.html-D1xx7zW_.js" as="script"><link rel="prefetch" href="/assets/index.html-CXNRMQ3J.js" as="script"><link rel="prefetch" href="/assets/index.html-RvXkHK7C.js" as="script"><link rel="prefetch" href="/assets/index.html-CuPDngCF.js" as="script"><link rel="prefetch" href="/assets/index.html-ClYOeB8x.js" as="script"><link rel="prefetch" href="/assets/index.html-BEO4SR9g.js" as="script"><link rel="prefetch" href="/assets/index.html-BfeDk1mJ.js" as="script"><link rel="prefetch" href="/assets/index.html-BVzstaww.js" as="script"><link rel="prefetch" href="/assets/index.html-B9Hvdr16.js" as="script"><link rel="prefetch" href="/assets/index.html-CmWzwgBI.js" as="script"><link rel="prefetch" href="/assets/index.html-DNFOMUGH.js" as="script"><link rel="prefetch" href="/assets/index.html-lMNkNi9E.js" as="script"><link rel="prefetch" href="/assets/index.html-BfI73xvt.js" as="script"><link rel="prefetch" href="/assets/index.html-CLKYtDO0.js" as="script"><link rel="prefetch" href="/assets/index.html-CzFL93Nn.js" as="script"><link rel="prefetch" href="/assets/index.html-BnxE5NrZ.js" as="script"><link rel="prefetch" href="/assets/index.html-HVOzvZV7.js" as="script"><link rel="prefetch" href="/assets/index.html-Br-DrxcW.js" as="script"><link rel="prefetch" href="/assets/index.html-Bf45t3kM.js" as="script"><link rel="prefetch" href="/assets/index.html-CIJYazcD.js" as="script"><link rel="prefetch" href="/assets/index.html-CXB_wKrh.js" as="script"><link rel="prefetch" href="/assets/index.html-V2aeTOvU.js" as="script"><link rel="prefetch" href="/assets/index.html-MtO9oLGZ.js" as="script"><link rel="prefetch" href="/assets/index.html-BwbKth5c.js" as="script"><link rel="prefetch" href="/assets/index.html-BsFbbzrK.js" as="script"><link rel="prefetch" href="/assets/index.html-CP8dptgg.js" as="script"><link rel="prefetch" href="/assets/404.html-BP0YCTlz.js" as="script"><link rel="prefetch" href="/assets/index.html-D1CUmx96.js" as="script"><link rel="prefetch" href="/assets/index.html-SLwYc4Dz.js" as="script"><link rel="prefetch" href="/assets/index.html-nVf8MPQw.js" as="script"><link rel="prefetch" href="/assets/index.html-C-3A2gDb.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-GXRgw7eJ.js" as="script"><link rel="prefetch" href="/assets/searchBox-default-DMJaFd_j.js" as="script"><link rel="prefetch" href="/assets/SearchBox-B84U6xtb.js" as="script"><link rel="prefetch" href="/assets/giscus-BZxmVUME.js" as="script"><link rel="prefetch" href="/assets/setupDevtools-7MC2TMWH-D6nkLtfE.js" as="script"></head><body><div id="app"><!--[--><!--[--><div class="theme-plume vp-layout" vp-container data-v-b27e7af6><!--[--><!--[--><!--]--><!--[--><span tabindex="-1" data-v-458707a3></span><a href="#VPContent" class="vp-skip-link visually-hidden" data-v-458707a3> Skip to content </a><!--]--><!----><header class="vp-nav" data-v-b27e7af6 data-v-bdc3dea8><div class="vp-navbar" vp-navbar data-v-bdc3dea8 data-v-dae97d8d><div class="wrapper" data-v-dae97d8d><div class="container" data-v-dae97d8d><div class="title" data-v-dae97d8d><div class="vp-navbar-title" data-v-dae97d8d data-v-e45b9648><a class="vp-link no-icon link title" href="/" data-v-e45b9648 data-v-c96dab1a><!--[--><!--[--><!--]--><!--[--><!--[--><!--[--><img class="vp-image dark logo" src="/images/logo.png" alt data-v-32848084><!--]--><!--[--><img class="vp-image light logo" src="/images/logo.png" alt data-v-32848084><!--]--><!--]--><!--]--><span data-v-e45b9648>zhengWei&#39;s Blog</span><!--[--><!--]--><!--]--><!----></a></div></div><div class="content" data-v-dae97d8d><div class="content-body" data-v-dae97d8d><!--[--><!--]--><div class="vp-navbar-search search" data-v-dae97d8d><div class="search-wrapper" data-v-d4b502e9><!----><div id="local-search" data-v-d4b502e9><button type="button" class="mini-search mini-search-button" aria-label="搜索文档" data-v-d4b502e9><span class="mini-search-button-container"><svg class="mini-search-search-icon" width="20" height="20" viewBox="0 0 20 20" aria-label="search icon"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="mini-search-button-placeholder">搜索文档</span></span><span class="mini-search-button-keys"><kbd class="mini-search-button-key"></kbd><kbd class="mini-search-button-key">K</kbd></span></button></div></div></div><nav aria-labelledby="main-nav-aria-label" class="vp-navbar-menu menu" data-v-dae97d8d data-v-d8755320><span id="main-nav-aria-label" class="visually-hidden" data-v-d8755320>Main Navigation</span><!--[--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/" tabindex="0" data-v-d8755320 data-v-bdfa2047 data-v-c96dab1a><!--[--><!----><span data-v-bdfa2047>首页</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/tags/" tabindex="0" data-v-d8755320 data-v-bdfa2047 data-v-c96dab1a><!--[--><!----><span data-v-bdfa2047>标签</span><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/archives/" tabindex="0" data-v-d8755320 data-v-bdfa2047 data-v-c96dab1a><!--[--><!----><span data-v-bdfa2047>归档</span><!--]--><!----></a><!--]--><!--[--><div class="vp-flyout vp-navbar-menu-group" data-v-d8755320 data-v-ac237f66><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-ac237f66><span class="text" data-v-ac237f66><!----><!----><span data-v-ac237f66>笔记</span><span class="vpi-chevron-down text-icon" data-v-ac237f66></span></span></button><div class="menu" data-v-ac237f66><div class="vp-menu" data-v-ac237f66 data-v-1b6fb17d><div class="items" data-v-1b6fb17d><!--[--><!--[--><div class="vp-menu-link" data-v-1b6fb17d data-v-69577ee4><a class="vp-link no-icon link" href="/vue/" data-v-69577ee4 data-v-c96dab1a><!--[--><!----> vue相关<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-1b6fb17d data-v-69577ee4><a class="vp-link no-icon link" href="/js/" data-v-69577ee4 data-v-c96dab1a><!--[--><!----> js相关<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-1b6fb17d data-v-69577ee4><a class="vp-link no-icon link" href="/node/" data-v-69577ee4 data-v-c96dab1a><!--[--><!----> node相关<!--]--><!----></a></div><!--]--><!--[--><div class="vp-menu-link" data-v-1b6fb17d data-v-69577ee4><a class="vp-link no-icon link" href="/notes/websiteGuide/" data-v-69577ee4 data-v-c96dab1a><!--[--><!----> 网址导航<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="vp-navbar-appearance appearance" data-v-dae97d8d data-v-b35a045f><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-b35a045f data-v-f2d64831 data-v-9edefdd4><span class="check" data-v-9edefdd4><span class="icon" data-v-9edefdd4><!--[--><span class="vpi-sun sun" data-v-f2d64831></span><span class="vpi-moon moon" data-v-f2d64831></span><!--]--></span></span></button></div><div class="vp-social-links vp-navbar-social-links social-links" data-v-dae97d8d data-v-04a90538 data-v-3262ea91><!--[--><a class="vp-social-link no-icon" href="https://github.com/weiGe66" aria-label="github" target="_blank" rel="noopener" data-v-3262ea91 data-v-204974e4><span class="vpi-social-github" /></a><a class="vp-social-link no-icon" href="https://juejin.cn/user/1169536105056071" aria-label="juejin" target="_blank" rel="noopener" data-v-3262ea91 data-v-204974e4><span class="vpi-social-juejin" /></a><!--]--></div><div class="vp-flyout vp-navbar-extra extra" data-v-dae97d8d data-v-16b274e6 data-v-ac237f66><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-ac237f66><span class="vpi-more-horizontal icon" data-v-ac237f66></span></button><div class="menu" data-v-ac237f66><div class="vp-menu" data-v-ac237f66 data-v-1b6fb17d><!----><!--[--><!--[--><!----><div class="group" data-v-16b274e6><div class="item appearance" data-v-16b274e6><p class="label" data-v-16b274e6>外观</p><div class="appearance-action" data-v-16b274e6><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-16b274e6 data-v-f2d64831 data-v-9edefdd4><span class="check" data-v-9edefdd4><span class="icon" data-v-9edefdd4><!--[--><span class="vpi-sun sun" data-v-f2d64831></span><span class="vpi-moon moon" data-v-f2d64831></span><!--]--></span></span></button></div></div></div><div class="group" data-v-16b274e6><div class="item social-links" data-v-16b274e6><div class="vp-social-links social-links-list" data-v-16b274e6 data-v-3262ea91><!--[--><a class="vp-social-link no-icon" href="https://github.com/weiGe66" aria-label="github" target="_blank" rel="noopener" data-v-3262ea91 data-v-204974e4><span class="vpi-social-github" /></a><a class="vp-social-link no-icon" href="https://juejin.cn/user/1169536105056071" aria-label="juejin" target="_blank" rel="noopener" data-v-3262ea91 data-v-204974e4><span class="vpi-social-juejin" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="vp-navbar-hamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="nav-screen" data-v-dae97d8d data-v-b11cc25f><span class="container" data-v-b11cc25f><span class="top" data-v-b11cc25f></span><span class="middle" data-v-b11cc25f></span><span class="bottom" data-v-b11cc25f></span></span></button></div></div></div></div><div class="divider" data-v-dae97d8d><div class="divider-line" data-v-dae97d8d></div></div></div><!----></header><!----><!----><!--[--><div id="VPContent" vp-content class="vp-content" data-v-b27e7af6 data-v-52ca6131><div class="has-aside vp-doc-container" data-v-fe4924ac><!--[--><!--]--><div class="container" data-v-fe4924ac><div class="aside" vp-outline data-v-fe4924ac><div class="aside-curtain" data-v-fe4924ac></div><div class="aside-container" data-v-fe4924ac><div class="aside-content" data-v-fe4924ac><div class="vp-doc-aside" data-v-fe4924ac data-v-78a6e094><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="vp-doc-aside-outline" role="navigation" data-v-78a6e094 data-v-dcbb2887><div class="content" data-v-dcbb2887><div class="outline-marker" data-v-dcbb2887></div><div id="doc-outline-aria-label" aria-level="2" class="outline-title" role="heading" data-v-dcbb2887><span data-v-dcbb2887>此页内容</span><span class="vpi-print icon" data-v-dcbb2887></span></div><ul class="root" data-v-dcbb2887 data-v-8a60f8c1><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-78a6e094></div><!--[--><!--]--></div></div></div></div><div class="content" data-v-fe4924ac><div class="content-container" data-v-fe4924ac><!--[--><!--]--><main class="main" data-v-fe4924ac><!----><!--[--><h1 class="vp-doc-title page-title" data-v-d64f313f>处理elementui 中Popper偏移的问题 <!----></h1><div class="vp-doc-meta" data-v-d64f313f><p class="reading-time" data-v-d64f313f><span class="vpi-books icon" data-v-d64f313f></span><span data-v-d64f313f>525 字</span><span data-v-d64f313f>约 2 分钟</span></p><!----><p class="create-time" data-v-d64f313f><span class="vpi-clock icon" data-v-d64f313f></span><span data-v-d64f313f>2024-12-28</span></p></div><!--]--><div class="_notes_vue_%E5%A4%84%E7%90%86elementui%20%E4%B8%ADPopper%E5%81%8F%E7%A7%BB%E7%9A%84%E9%97%AE%E9%A2%98_ external-link-icon-enabled vp-doc plume-content" vp-content data-v-fe4924ac><div data-v-fe4924ac><div class="language- line-numbers-mode" data-ext="" data-title=""><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki one-dark-pro vp-code"><code><span class="line"><span>import Popper from &#39;element-ui/lib/utils/popper.js&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import Vue from &#39;vue&#39;</span></span>
+<span class="line"><span>import FilterPanel from &#39;./tableheaderFilterpanel.vue&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>function hasClass(el, cls) {</span></span>
+<span class="line"><span>  if (!el || !cls) return false</span></span>
+<span class="line"><span>  if (cls.indexOf(&#39; &#39;) !== -1) throw new Error(&#39;className should not contain space.&#39;)</span></span>
+<span class="line"><span>  if (el.classList) {</span></span>
+<span class="line"><span>    return el.classList.contains(cls)</span></span>
+<span class="line"><span>  } else {</span></span>
+<span class="line"><span>    return (&#39; &#39; + el.className + &#39; &#39;).indexOf(&#39; &#39; + cls + &#39; &#39;) &gt; -1</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>function setPropsDefault(component, props) {</span></span>
+<span class="line"><span>  let c_props = component.props</span></span>
+<span class="line"><span>  Object.keys(props).forEach((key) =&gt; {</span></span>
+<span class="line"><span>    c_props[key] = Object.assign({}, c_props[key], props[key])</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>function setMethodsDefault(component, methods) {</span></span>
+<span class="line"><span>  let c_methods = component.methods</span></span>
+<span class="line"><span>  Object.keys(methods).forEach((key) =&gt; {</span></span>
+<span class="line"><span>    c_methods[key] = methods[key]</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>function repairPopper() {</span></span>
+<span class="line"><span>  if (!Popper.prototype.repairR) {</span></span>
+<span class="line"><span>    Popper.prototype.repairR = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    let __getBoundaries = Popper.prototype._getBoundaries</span></span>
+<span class="line"><span>    Popper.prototype._getBoundaries = function (data, padding, boundariesElement) {</span></span>
+<span class="line"><span>      const boundaries = __getBoundaries.call(this, data, padding, boundariesElement)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>      if (this._options.boundariesElement === &#39;viewport&#39;) {</span></span>
+<span class="line"><span>        const root = window</span></span>
+<span class="line"><span>        const body = root.document.body</span></span>
+<span class="line"><span>        const html = root.document.documentElement</span></span>
+<span class="line"><span>        let width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth)</span></span>
+<span class="line"><span>        let height = Math.max(</span></span>
+<span class="line"><span>          body.scrollHeight,</span></span>
+<span class="line"><span>          body.offsetHeight,</span></span>
+<span class="line"><span>          html.clientHeight,</span></span>
+<span class="line"><span>          html.scrollHeight,</span></span>
+<span class="line"><span>          html.offsetHeight</span></span>
+<span class="line"><span>        )</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        boundaries.right = boundaries.right - root.document.documentElement.clientWidth + width</span></span>
+<span class="line"><span>        boundaries.bottom = boundaries.bottom - root.document.documentElement.clientHeight + height</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>      return boundaries</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>export default function (ElementUI) {</span></span>
+<span class="line"><span>  repairPopper()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // setPropsDefault(ElementUI.Table, {</span></span>
+<span class="line"><span>  //   tooltipEffect: {</span></span>
+<span class="line"><span>  //     default: &#39;light&#39;</span></span>
+<span class="line"><span>  //   }</span></span>
+<span class="line"><span>  // })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  setPropsDefault(ElementUI.TableColumn, {</span></span>
+<span class="line"><span>    filterPlacement: {</span></span>
+<span class="line"><span>      default: &#39;bottom&#39;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  setPropsDefault(ElementUI.Dropdown, {</span></span>
+<span class="line"><span>    placement: {</span></span>
+<span class="line"><span>      default: &#39;bottom&#39;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  setPropsDefault(ElementUI.Dialog, {</span></span>
+<span class="line"><span>    appendToBody: {</span></span>
+<span class="line"><span>      default: true</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span>  // 设置表头最小宽度,保证表头不换行</span></span>
+<span class="line"><span>  setMethodsDefault(ElementUI.TableColumn, {</span></span>
+<span class="line"><span>    setColumnWidth(column) {</span></span>
+<span class="line"><span>      if (this.realWidth) {</span></span>
+<span class="line"><span>        column.width = this.realWidth</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>      if (this.realMinWidth) {</span></span>
+<span class="line"><span>        column.minWidth = this.realMinWidth</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>      if (!column.minWidth) {</span></span>
+<span class="line"><span>        if (!column.width) {</span></span>
+<span class="line"><span>          let label = column.label || &#39;&#39;</span></span>
+<span class="line"><span>          let labels = label.match(/./gu) || []</span></span>
+<span class="line"><span>          let labelW = 0</span></span>
+<span class="line"><span>          labels.forEach((s) =&gt; (labelW += ASCII_W[s] || 14))</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>          let sortable = column.sortable ? 24 : 0</span></span>
+<span class="line"><span>          let filters = column.filters ? 16 : 0</span></span>
+<span class="line"><span>          column.minWidth = Math.max(80, labelW + 22 + sortable + filters)</span></span>
+<span class="line"><span>        } else {</span></span>
+<span class="line"><span>          column.minWidth = 80</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>      column.realWidth = column.width === undefined ? column.minWidth : column.width</span></span>
+<span class="line"><span>      return column</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  // 美化表头搜索</span></span>
+<span class="line"><span>  if (ElementUI.Table.components.TableHeader) {</span></span>
+<span class="line"><span>    setMethodsDefault(ElementUI.Table.components.TableHeader, {</span></span>
+<span class="line"><span>      handleFilterClick(event, column) {</span></span>
+<span class="line"><span>        event.stopPropagation()</span></span>
+<span class="line"><span>        const target = event.target</span></span>
+<span class="line"><span>        let cell = target.tagName === &#39;TH&#39; ? target : target.parentNode</span></span>
+<span class="line"><span>        if (hasClass(cell, &#39;noclick&#39;)) return</span></span>
+<span class="line"><span>        cell = cell.querySelector(&#39;.el-table__column-filter-trigger&#39;) || cell</span></span>
+<span class="line"><span>        const table = this.$parent</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        let filterPanel = this.filterPanels[column.id]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if (filterPanel &amp;&amp; column.filterOpened) {</span></span>
+<span class="line"><span>          filterPanel.showPopper = false</span></span>
+<span class="line"><span>          return</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if (!filterPanel) {</span></span>
+<span class="line"><span>          filterPanel = new Vue(FilterPanel)</span></span>
+<span class="line"><span>          this.filterPanels[column.id] = filterPanel</span></span>
+<span class="line"><span>          if (column.filterPlacement) {</span></span>
+<span class="line"><span>            filterPanel.placement = column.filterPlacement</span></span>
+<span class="line"><span>          }</span></span>
+<span class="line"><span>          filterPanel.table = table</span></span>
+<span class="line"><span>          filterPanel.cell = cell</span></span>
+<span class="line"><span>          filterPanel.column = column</span></span>
+<span class="line"><span>          !this.$isServer &amp;&amp; filterPanel.$mount(document.createElement(&#39;div&#39;))</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        setTimeout(() =&gt; {</span></span>
+<span class="line"><span>          filterPanel.showPopper = true</span></span>
+<span class="line"><span>        }, 16)</span></span>
+<span class="line"><span>      }</span></span>
+<span class="line"><span>    })</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const ASCII_W = {</span></span>
+<span class="line"><span>  &#39; &#39;: 4.125,</span></span>
+<span class="line"><span>  0: 8.21875,</span></span>
+<span class="line"><span>  1: 8.21875,</span></span>
+<span class="line"><span>  2: 8.21875,</span></span>
+<span class="line"><span>  3: 8.21875,</span></span>
+<span class="line"><span>  4: 8.21875,</span></span>
+<span class="line"><span>  5: 8.21875,</span></span>
+<span class="line"><span>  6: 8.21875,</span></span>
+<span class="line"><span>  7: 8.21875,</span></span>
+<span class="line"><span>  8: 8.21875,</span></span>
+<span class="line"><span>  9: 8.21875,</span></span>
+<span class="line"><span>  &#39;!&#39;: 4.375,</span></span>
+<span class="line"><span>  &#39;&quot;&#39;: 6.109375,</span></span>
+<span class="line"><span>  &#39;#&#39;: 8.9375,</span></span>
+<span class="line"><span>  $: 8.21875,</span></span>
+<span class="line"><span>  &#39;%&#39;: 12.46875,</span></span>
+<span class="line"><span>  &#39;&amp;&#39;: 12.1875,</span></span>
+<span class="line"><span>  &quot;&#39;&quot;: 3.59375,</span></span>
+<span class="line"><span>  &#39;(&#39;: 4.6875,</span></span>
+<span class="line"><span>  &#39;)&#39;: 4.6875,</span></span>
+<span class="line"><span>  &#39;*&#39;: 6.375,</span></span>
+<span class="line"><span>  &#39;+&#39;: 10.390625,</span></span>
+<span class="line"><span>  &#39;,&#39;: 3.375,</span></span>
+<span class="line"><span>  &#39;-&#39;: 6.0625,</span></span>
+<span class="line"><span>  &#39;.&#39;: 3.375,</span></span>
+<span class="line"><span>  &#39;/&#39;: 5.984375,</span></span>
+<span class="line"><span>  &#39;:&#39;: 3.375,</span></span>
+<span class="line"><span>  &#39;;&#39;: 3.375,</span></span>
+<span class="line"><span>  &#39;&lt;&#39;: 10.390625,</span></span>
+<span class="line"><span>  &#39;=&#39;: 10.390625,</span></span>
+<span class="line"><span>  &#39;&gt;&#39;: 10.390625,</span></span>
+<span class="line"><span>  &#39;?&#39;: 6.765625,</span></span>
+<span class="line"><span>  &#39;@&#39;: 14.4375,</span></span>
+<span class="line"><span>  A: 9.859375,</span></span>
+<span class="line"><span>  B: 8.796875,</span></span>
+<span class="line"><span>  C: 9.375,</span></span>
+<span class="line"><span>  D: 10.671875,</span></span>
+<span class="line"><span>  E: 7.703125,</span></span>
+<span class="line"><span>  F: 7.4375,</span></span>
+<span class="line"><span>  G: 10.421875,</span></span>
+<span class="line"><span>  H: 10.828125,</span></span>
+<span class="line"><span>  I: 4.125,</span></span>
+<span class="line"><span>  J: 5.546875,</span></span>
+<span class="line"><span>  K: 8.890625,</span></span>
+<span class="line"><span>  L: 7.1875,</span></span>
+<span class="line"><span>  M: 13.6875,</span></span>
+<span class="line"><span>  N: 11.390625,</span></span>
+<span class="line"><span>  O: 11.421875,</span></span>
+<span class="line"><span>  P: 8.578125,</span></span>
+<span class="line"><span>  Q: 11.421875,</span></span>
+<span class="line"><span>  R: 9.140625,</span></span>
+<span class="line"><span>  S: 8.09375,</span></span>
+<span class="line"><span>  T: 8.03125,</span></span>
+<span class="line"><span>  U: 10.453125,</span></span>
+<span class="line"><span>  V: 9.46875,</span></span>
+<span class="line"><span>  W: 14.25,</span></span>
+<span class="line"><span>  X: 9.03125,</span></span>
+<span class="line"><span>  Y: 8.453125,</span></span>
+<span class="line"><span>  Z: 8.6875,</span></span>
+<span class="line"><span>  &#39;[&#39;: 4.6875,</span></span>
+<span class="line"><span>  &#39;\\&#39;: 5.828125,</span></span>
+<span class="line"><span>  &#39;]&#39;: 4.6875,</span></span>
+<span class="line"><span>  &#39;^&#39;: 10.390625,</span></span>
+<span class="line"><span>  _: 6.28125,</span></span>
+<span class="line"><span>  &#39;`&#39;: 4.140625,</span></span>
+<span class="line"><span>  a: 7.75,</span></span>
+<span class="line"><span>  b: 8.953125,</span></span>
+<span class="line"><span>  c: 7.03125,</span></span>
+<span class="line"><span>  d: 8.96875,</span></span>
+<span class="line"><span>  e: 7.953125,</span></span>
+<span class="line"><span>  f: 4.859375,</span></span>
+<span class="line"><span>  g: 8.96875,</span></span>
+<span class="line"><span>  h: 8.625,</span></span>
+<span class="line"><span>  i: 3.734375,</span></span>
+<span class="line"><span>  j: 3.75,</span></span>
+<span class="line"><span>  k: 7.625,</span></span>
+<span class="line"><span>  l: 3.734375,</span></span>
+<span class="line"><span>  m: 13.125,</span></span>
+<span class="line"><span>  n: 8.640625,</span></span>
+<span class="line"><span>  o: 8.90625,</span></span>
+<span class="line"><span>  p: 8.953125,</span></span>
+<span class="line"><span>  q: 8.96875,</span></span>
+<span class="line"><span>  r: 5.40625,</span></span>
+<span class="line"><span>  s: 6.546875,</span></span>
+<span class="line"><span>  t: 5.21875,</span></span>
+<span class="line"><span>  u: 8.640625,</span></span>
+<span class="line"><span>  v: 7.359375,</span></span>
+<span class="line"><span>  w: 11.0625,</span></span>
+<span class="line"><span>  x: 7.109375,</span></span>
+<span class="line"><span>  y: 7.421875,</span></span>
+<span class="line"><span>  z: 6.890625,</span></span>
+<span class="line"><span>  &#39;{&#39;: 4.6875,</span></span>
+<span class="line"><span>  &#39;|&#39;: 3.78125,</span></span>
+<span class="line"><span>  &#39;}&#39;: 4.6875,</span></span>
+<span class="line"><span>  &#39;~&#39;: 10.390625</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="用法" tabindex="-1"><a class="header-anchor" href="#用法"><span>用法</span></a></h1><div class="language- line-numbers-mode" data-ext="" data-title=""><button class="copy" title="复制代码" data-copied="已复制"></button><pre class="shiki one-dark-pro vp-code"><code><span class="line"><span>import { repairEl } from &#39;./index.js&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// </span></span>
+<span class="line"><span>repairEl(ElementUI)</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!----><!----><!----></div></main><footer class="vp-doc-footer" data-v-fe4924ac data-v-b1137423><!--[--><!--]--><!----><div class="contributors" aria-label="Contributors" data-v-b1137423><span class="contributors-label" data-v-b1137423>贡献者: </span><span class="contributors-info" data-v-b1137423><!--[--><!--[--><span class="contributor" data-v-b1137423>zhengwei</span><!----><!--]--><!--]--></span></div><!----></footer><div id="comment" class="giscus-wrapper vp-comment" vp-comment style="display:block;" data-v-fe4924ac><div class="loading-icon-wrapper" style="display:flex;align-items:center;justify-content:center;height:96px"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" preserveAspectRatio="xMidYMid" viewBox="25 25 50 50"><animateTransform attributeName="transform" type="rotate" dur="2s" keyTimes="0;1" repeatCount="indefinite" values="0;360"></animateTransform><circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><animate attributeName="stroke-dasharray" dur="1.5s" keyTimes="0;0.5;1" repeatCount="indefinite" values="1,200;90,200;1,200"></animate><animate attributeName="stroke-dashoffset" dur="1.5s" keyTimes="0;0.5;1" repeatCount="indefinite" values="0;-35px;-125px"></animate></circle></svg></div></div><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!--]--><button style="display:none;" type="button" class="vp-back-to-top" aria-label="back to top" data-v-b27e7af6 data-v-76d6e230><span class="percent" data-allow-mismatch data-v-76d6e230>0%</span><span class="show icon vpi-back-to-top" data-v-76d6e230></span><svg aria-hidden="true" data-v-76d6e230><circle cx="50%" cy="50%" data-allow-mismatch style="stroke-dasharray:calc(0% - 12.566370614359172px) calc(314.1592653589793% - 12.566370614359172px);" data-v-76d6e230></circle></svg></button><footer class="vp-footer" vp-footer data-v-b27e7af6 data-v-9cd8df76><!--[--><div class="container" data-v-9cd8df76><!----><p class="copyright" data-v-9cd8df76>Copyright © 2024 weiGe66</p></div><!--]--></footer><!--[--><!--]--><!--]--></div><!----><!--]--><!--[--><!--]--><!--]--></div><script type="module" src="/assets/app-0O2wLXp2.js" defer></script></body></html>
