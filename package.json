@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "weiGe的个人博客",
   "packageManager": "pnpm@9.12.3",
-  "author": "zhengwei <wangzhengwei@nstc.com.cn>",
+  "author": "weige66 <2361929296@qq.com>",
   "license": "MIT",
   "engines": {
     "node": "^18.20.0 || >=20.0.0"
