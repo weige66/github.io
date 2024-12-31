@@ -1,12 +1,21 @@
 :root {
   /** 主题颜色 */
 
-  /*
-  --vp-c-brand-1: #5086a1;
+  --vp-c-text-hero-name: #d9ecff;
+  --vp-c-text-hero-tagline: #79bbff;
+  --vp-c-text-hero-text: #79bbff;
+
+  --vp-button-brand-active-bg: #337ecc;
+  --vp-button-brand-hover-bg: #79bbff;
+  --vp-button-brand-bg: #409eff;
+
+  --vp-c-brand-1: #337ecc;
+  --vp-c-brand-2: #79bbff;
+
+  /* --vp-c-brand-1: #5086a1;
   --vp-c-brand-2: #6aa1b7;
   --vp-c-brand-3: #8cccd5;
-  --vp-c-brand-soft: rgba(131, 208, 218, 0.314);
-  */
+  --vp-c-brand-soft: rgba(131, 208, 218, 0.314); */
 
   /** 背景颜色 */
 
@@ -24,6 +33,9 @@
   --vp-c-text-2: rgba(60, 60, 67, 0.78);
   --vp-c-text-3: rgba(60, 60, 67, 0.56);
   */
+
+  /* 头像大小 */
+  --vp-nav-logo-height: 36px;
 }
 
 /** 深色模式 */
